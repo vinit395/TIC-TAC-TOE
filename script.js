@@ -24,10 +24,21 @@ const winningCondition = [
   [2, 5, 8],
   [0, 4, 8],
   [2, 4, 6],
-  [1, 5, 9],
 ];
 
+// const winningCondition = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+//   [1, 4, 7],
+//   [2, 5, 8],
+//   [3, 6, 9],
+//   [1, 5, 9],
+//   [3, 5, 7],
+// ];
+
 function checkWinner() {
+  let winnerDeclared = false;
   for (let index = 0; index < winningCondition.length; index++) {
     let element1 = board[winningCondition[index][0]];
     let element2 = board[winningCondition[index][1]];
@@ -39,19 +50,21 @@ function checkWinner() {
     // if (element1 === "" || element2 === "" || element3 === "") {
     //   return;
     // }
-    if (element1 !== "" && element1 === element2 && element2 === element3) {
+    if (element1 !== "" && element1 === element2 && element1 === element3) {
       // console.log(`winner is ${element1} `);
-
       let playerWon = element1;
       winner.classList.remove("hidden");
       winner.textContent = `Winner is ${playerWon}`;
       // console.log(winner.lastChild);
-
       newGameBtn.classList.remove("hidden");
       isGameActive = false;
-    } else {
-      winner.textContent = `TiE`;
+      winnerDeclared = true;
+      break;
     }
+  }
+  if (winnerDeclared === false && !board.includes("")) {
+    winner.classList.remove("hidden");
+    winner.textContent = `TiE`;
   }
 }
 

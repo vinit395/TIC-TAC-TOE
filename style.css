@@ -19,23 +19,23 @@ h1 {
   margin-bottom: 20px;
 }
 #winner {
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
-  padding: 20px;
+  padding-top: 20px;
   color: #201e1f;
 }
 
-.reset-conatainer,.winner-Conatiner{
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
+.Button-conatainer {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  /* flex-direction: column; */
 }
 
 #newGame,
 #Reset {
   padding: 20px;
-  border: none;
+  border: 2px solid black;
   border-radius: 5px;
   font-size: 18px;
   font-weight: bold;
@@ -43,8 +43,16 @@ flex-direction: column;
   color: #201e1f;
 }
 
+#newGame:hover,
+#Reset:hover {
+  cursor: pointer;
+  background-color: #52afbd;
+  color: #272526;
+  transform: scale(1.1);
+}
+
 #Game {
-  height: 70vh;
+  height: 65vh;
   display: flex;
   justify-content: center;
   align-items: center;
