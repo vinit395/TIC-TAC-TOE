@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:"Gilroy";
 }
 
 body {
@@ -17,12 +17,16 @@ h1 {
   padding-top: 20px;
   font-size: 3rem;
   margin-bottom: 20px;
+   letter-spacing: -4px;
+
 }
 #winner {
   font-size: 3rem;
   text-align: center;
   padding-top: 20px;
   color: #201e1f;
+  letter-spacing: -1px;
+
 }
 
 .Button-conatainer {
@@ -71,12 +75,43 @@ h1 {
   /* padding: 20px; */
   border: none;
   font-size: 5rem;
+  font-weight: lighter;
   color: white;
   cursor: pointer;
   border-radius: 10px;
   color: #201e1f;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .hidden {
   display: none;
+}
+
+@media (max-width:600px){
+     h1{
+      font-size: 2rem;
+         letter-spacing: -2px;
+           font-weight: bold;
+
+
+    }  
+    #winner{
+      font-size: 2rem;
+        font-weight: bold;
+
+    }   
+    .Box {
+      height: 90px;
+      width:90px;
+        font-size: 2rem;
+  /* font-weight: bold; */
+
+    } 
+    #newGame,
+#Reset{
+    padding: 15px;
+  font-size: 12px;
+  font-weight: bold;
+
+} 
 }
