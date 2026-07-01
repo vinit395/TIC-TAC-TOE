@@ -1,5 +1,6 @@
 # Tic Tac Toe Game
-<details> Selected elements like game box, reset button, new game button and winning title. 
-<summary>First selected all elements with queryslector </summary>
-</details>
-# TIC-TAC-TOE
+This is game is made by html,css and javascript by vinit.
+
+# Live link of the game.
+ Check out:- 
+<https://vinit395.github.io/TIC-TAC-TOE/>
