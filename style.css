@@ -2,61 +2,115 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:"Gilroy";
+  font-family: "Outfit", sans-serif;
+  max-width: 700px;
+  margin: auto;
+  overflow: hidden;
 }
 
 body {
-  background-color: #faaa8d;
+  background-color: #f8f9fc;
 }
 h1 {
-  height: 10vh;
-  background-color: #feefdd;
+  /* background-color: #feefdd; */
   text-align: center;
   align-items: center;
-  color: #201e1f;
-  padding-top: 20px;
-  font-size: 3rem;
-  margin-bottom: 20px;
-   letter-spacing: -4px;
-
+  color: #1e2a52;
+  padding-top: 40px;
+  font-size: 56px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: -2px;
 }
-#winner {
-  font-size: 3rem;
-  text-align: center;
-  padding-top: 20px;
-  color: #201e1f;
-  letter-spacing: -1px;
 
+h6 {
+  color: #7d8799;
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 20px;
+  font-weight: 400;
+}
+h5 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.winner-Conatiner {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  margin-top: 30px;
+  margin-bottom: 25px;
+
+  /* flex-direction: column; */
+}
+
+#winner {
+  font-size: 30px;
+  text-align: center;
+  padding-top: 8px;
+  /* padding-top: 30px; */
+  /* padding-bottom: 25px; */
+  background: #edfdf3;
+  border: 2px solid #b7f3c8;
+  color: #238b45;
+  letter-spacing: -1px;
+  box-shadow: 0 5px 15px rgba(35, 139, 69, 0.15);
+  font-weight: 600;
+  width: 250px;
+  height: 60px;
+  border-radius: 5px;
 }
 
 .Button-conatainer {
   display: flex;
-  gap: 50px;
+  gap: 25px;
   justify-content: center;
+  padding-bottom: 40px;
   /* flex-direction: column; */
 }
 
-#newGame,
-#Reset {
+#newGame {
   padding: 20px;
-  border: 2px solid black;
   border-radius: 5px;
   font-size: 18px;
   font-weight: bold;
-  background-color: #50b2c0;
-  color: #201e1f;
+  background: #4a7dff;
+  color: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  font-weight: 600;
+  transition: 0.3s;
 }
 
-#newGame:hover,
+#Reset {
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  background: #ff6b5a;
+  color: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+#newGame:hover {
+  cursor: pointer;
+  background: #376cf7;
+  color: white;
+  transform: scale(1.1);
+}
+
 #Reset:hover {
   cursor: pointer;
-  background-color: #52afbd;
-  color: #272526;
+  background: #f75446;
+  color: white;
   transform: scale(1.1);
 }
 
 #Game {
-  height: 65vh;
+  /* height: 65vh; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,53 +119,60 @@ h1 {
 #gridContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 16px;
 }
 
 .Box {
-  background-color: #ff4000;
+  background-color: #ffffff;
   height: 120px;
   width: 120px;
   /* padding: 20px; */
   border: none;
-  font-size: 5rem;
+  font-size: 72px;
+  font-weight: 600;
   font-weight: lighter;
   color: white;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 18px;
   color: #201e1f;
   font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.25s ease;
+}
+
+.Box:hover {
+  transform: translateY(-4px);
 }
 
 .hidden {
   display: none;
 }
 
-@media (max-width:600px){
-     h1{
-      font-size: 2rem;
-         letter-spacing: -2px;
-           font-weight: bold;
+@media (max-width: 600px) {
+  h1 {
+    font-size: 38px;
+    letter-spacing: -2px;
+    font-weight: bold;
+    padding-top: 20px;
+  }
+  #winner {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+.Button-conatainer{
+    padding-bottom: 20px;
+}
 
-
-    }  
-    #winner{
-      font-size: 2rem;
-        font-weight: bold;
-
-    }   
-    .Box {
-      height: 90px;
-      width:90px;
-        font-size: 2rem;
-  /* font-weight: bold; */
-
-    } 
-    #newGame,
-#Reset{
+  .Box {
+    height: 90px;
+    width: 90px;
+    font-size: 40px;
+    /* font-weight: bold; */
+  }
+  #newGame,
+  #Reset {
     padding: 15px;
-  font-size: 12px;
-  font-weight: bold;
-
-} 
+    font-size: 12px;
+    font-weight: bold;
+  }
 }

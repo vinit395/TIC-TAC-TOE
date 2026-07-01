@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic tac toe</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
   </head>
   <body>
-    <h1>Tic Tac Toe</h1>
+    <h1>Tic Tac <span style="color: #ff6b5a">Toe</span></h1>
+    <h6>Classic game for two players</h5>
+<h5 >Current Turn: <span id="Current-Turn">X</span></h6>
 
-    <div class="winner-Conatiner">
-      <h2 id="winner" class="hidden"></h2>
-    </div>
 
     <div id="Game">
       <div id="gridContainer">
@@ -25,6 +27,9 @@
         <button class="Box"></button>
         <button class="Box"></button>
       </div>
+    </div>
+        <div class="winner-Conatiner">
+      <h2 id="winner" class="hidden">Winner is <span class="winner-Name"></span></h2>
     </div>
     <div class="Button-conatainer">
       <button id="Reset" class="hidden">Reset Button</button>

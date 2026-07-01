@@ -10,6 +10,9 @@ let boxes = document.querySelectorAll(".Box");
 let winner = document.querySelector("#winner");
 let newGameBtn = document.querySelector("#newGame");
 let resetBtn = document.querySelector("#Reset");
+let CurrentTurn = document.querySelector("#Current-Turn");
+let winnerName = document.querySelector(".winner-Name");
+
 //add all the selectors and continue the game
 
 let currentPlayerX = true;
@@ -25,6 +28,12 @@ const winningCondition = [
   [0, 4, 8],
   [2, 4, 6],
 ];
+
+// if (currentPlayerX) {
+//   CurrentTurn.textContent = "X";
+// } else {
+//   CurrentTurn.textContent = "O";
+// }
 
 // const winningCondition = [
 //   [1, 2, 3],
@@ -54,7 +63,12 @@ function checkWinner() {
       // console.log(`winner is ${element1} `);
       let playerWon = element1;
       winner.classList.remove("hidden");
-      winner.textContent = `Winner is ${playerWon}`;
+      winnerName.textContent = `${playerWon}`;
+      if (winnerName.textContent === "X") {
+        winnerName.style.color = "#4A7DFF";
+      } else {
+        winnerName.style.color = "#FF5B5B";
+      }
       // console.log(winner.lastChild);
       newGameBtn.classList.remove("hidden");
       isGameActive = false;
@@ -74,13 +88,21 @@ boxes.forEach((Element, index) => {
     if (Element.textContent === "") {
       // if (Element.textContent !== "") {return}
       if (currentPlayerX) {
+        CurrentTurn.textContent = "O";
+
         board[index] = "X";
         Element.textContent = "X";
+        Element.style.color = "#4A7DFF";
         // console.log(board);
         currentPlayerX = false;
       } else {
+        CurrentTurn.textContent = "X";
+
         board[index] = "O";
         Element.textContent = "O";
+        // Element.classList.add(".O");
+        Element.style.color = "#FF5B5B";
+
         currentPlayerX = true;
       }
       checkWinner();
