@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +11,9 @@
 
 body {
   background-color: #f8f9fc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 h1 {
   /* background-color: #feefdd; */
@@ -148,6 +152,24 @@ h5 {
   display: none;
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-text {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 12px;
+  color: #666;
+  font-weight: bold;
+}
+
+.footer-text a {
+  text-decoration: none;
+  color: purple;
+}
+
 @media (max-width: 600px) {
   h1 {
     font-size: 38px;
@@ -159,15 +181,15 @@ h5 {
     font-size: 2rem;
     font-weight: bold;
   }
-.Button-conatainer{
+  .Button-conatainer {
     padding-bottom: 20px;
-}
+  }
 
   .Box {
     height: 90px;
     width: 90px;
     font-size: 40px;
-    /* font-weight: bold; */
+    font-weight: bold;
   }
   #newGame,
   #Reset {
